@@ -1,8 +1,8 @@
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+FROM dotnet/runtime:7.0.5-nanoserver-1809 AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM microsoft/dotnet:2.2-sdk AS build
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["src/Services/Tracking/Tracking.API/Tracking.API.csproj", "src/Services/Tracking/Tracking.API/"]
 RUN dotnet restore "src/Services/Tracking/Tracking.API/Tracking.API.csproj"

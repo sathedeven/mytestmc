@@ -52,7 +52,7 @@ namespace Payment.API
                   AddIntegrationServices(Configuration)
                   .AddCustomDbContext(Configuration).
                   RegisterEventBus(Configuration).
-                  AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+                  AddMvc(options => options.EnableEndpointRouting = false);
 
             services.AddApplicationInsightsTelemetry(Configuration);
 
@@ -88,7 +88,8 @@ namespace Payment.API
             tConfig.InstrumentationKey = config["ApplicationInsights:InstrumentationKey"];// "dbd67a2f-a911-4d69-be31-e7c0b53b248d";
 
             
-            app.UseMvc();
+            app.UseMvc(routes => routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}"));
+
             ConfigureEventBus(app);
 
             // Enable middleware to serve generated Swagger as a JSON endpoint.

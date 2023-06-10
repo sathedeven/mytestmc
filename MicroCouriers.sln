@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.271
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CF942185-A6C0-4F21-A194-EE3474A27631}"
 EndProject
@@ -65,7 +65,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadModel.AzFn", "src\Servi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShippingSimulation", "ShippingSimulation", "{FA179B04-0334-4827-81DE-60254E9900ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderShipping", "src\ShippingSimulation\OrderShipping\OrderShipping.csproj", "{3BF67944-A301-46D3-AF24-EE6538AF0C7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderShipping", "src\ShippingSimulation\OrderShipping\OrderShipping.csproj", "{3BF67944-A301-46D3-AF24-EE6538AF0C7F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroCourier.Web", "src\Web\MicroCourier.Web\MicroCourier.Web.csproj", "{04FDED46-05DF-4E1A-873F-2329098D7DB1}"
 EndProject
@@ -79,13 +79,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shipping", "Shipping", "{B1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shipping.API", "src\Services\Shipping\Shipping.API\Shipping.API.csproj", "{E15A3322-21CC-41AC-AEF3-2742F452C1DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shipping.Application", "src\Services\Shipping\Shipping.Application\Shipping.Application.csproj", "{C2601724-2DDD-42C9-8478-C8C691F9C1DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shipping.Application", "src\Services\Shipping\Shipping.Application\Shipping.Application.csproj", "{C2601724-2DDD-42C9-8478-C8C691F9C1DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shipping.Domain", "src\Services\Shipping\Shipping.Domain\Shipping.Domain.csproj", "{05D53D5E-C2C3-41E9-899E-E1044EFEB89E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shipping.Domain", "src\Services\Shipping\Shipping.Domain\Shipping.Domain.csproj", "{05D53D5E-C2C3-41E9-899E-E1044EFEB89E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shipping.Persistence", "src\Services\Shipping\Shipping.Persistence\Shipping.Persistence.csproj", "{E9BB8CF7-71A5-4102-BD7B-F5B2CBB70B89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shipping.Persistence", "src\Services\Shipping\Shipping.Persistence\Shipping.Persistence.csproj", "{E9BB8CF7-71A5-4102-BD7B-F5B2CBB70B89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shipping.Tests", "src\Services\Shipping\Shipping.Tests\Shipping.Tests.csproj", "{CB843C7C-F767-4D88-882D-44B804741610}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shipping.Tests", "src\Services\Shipping\Shipping.Tests\Shipping.Tests.csproj", "{CB843C7C-F767-4D88-882D-44B804741610}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroCouriers.Web", "src\Web\MicroCouriers.Web\MicroCouriers.Web.csproj", "{140EC90E-22A7-4912-AC34-B5D197B1674E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -213,6 +215,10 @@ Global
 		{CB843C7C-F767-4D88-882D-44B804741610}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB843C7C-F767-4D88-882D-44B804741610}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB843C7C-F767-4D88-882D-44B804741610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{140EC90E-22A7-4912-AC34-B5D197B1674E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{140EC90E-22A7-4912-AC34-B5D197B1674E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{140EC90E-22A7-4912-AC34-B5D197B1674E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{140EC90E-22A7-4912-AC34-B5D197B1674E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -259,6 +265,7 @@ Global
 		{05D53D5E-C2C3-41E9-899E-E1044EFEB89E} = {B1550541-ACD8-4B42-A1A2-164CF3752D3C}
 		{E9BB8CF7-71A5-4102-BD7B-F5B2CBB70B89} = {B1550541-ACD8-4B42-A1A2-164CF3752D3C}
 		{CB843C7C-F767-4D88-882D-44B804741610} = {B1550541-ACD8-4B42-A1A2-164CF3752D3C}
+		{140EC90E-22A7-4912-AC34-B5D197B1674E} = {4A4A8E44-3B45-4657-A442-F8CA1709CCAB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E13E4D21-76D2-45C9-B2EC-29A70284CD9E}

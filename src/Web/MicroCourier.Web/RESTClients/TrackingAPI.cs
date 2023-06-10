@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft;
 using Newtonsoft.Json;
+using MicroCourier.Web.Extensions;
 
 namespace MicroCourier.Web.RESTClients
 {

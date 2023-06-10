@@ -45,7 +45,7 @@ namespace Tracking.API
                   AddIntegrationServices(Configuration)
                   .AddCustomDbContext(Configuration).
                   RegisterEventBus(Configuration).
-                  AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+                  AddMvc(options => options.EnableEndpointRouting = false);
 
 
             services.AddApplicationInsightsTelemetry(Configuration);
@@ -96,7 +96,7 @@ namespace Tracking.API
             var tConfig = app.ApplicationServices.GetRequiredService<TelemetryConfiguration>();
             tConfig.InstrumentationKey = config["ApplicationInsights:InstrumentationKey"];
             
-            app.UseMvc();
+            app.UseMvc(routes => routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}"));
 
             //Ensure Event Database exists
             trackingRepo.EnsureDatabase();

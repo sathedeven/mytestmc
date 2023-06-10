@@ -36,7 +36,7 @@ namespace Shipping.API
                  AddIntegrationServices(Configuration)
                  .AddCustomDbContext(Configuration).
                  RegisterEventBus(Configuration).
-                 AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+                 AddMvc(options => options.EnableEndpointRouting = false);
 
          
             // Register the Swagger generator, defining one or more Swagger documents
@@ -62,7 +62,8 @@ namespace Shipping.API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+            app.UseMvc(routes => routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}"));
+
         }
     }
 
